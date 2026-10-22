@@ -18,6 +18,12 @@ export class Home {
   // Atributo => variável de uma classe
   public nome = '';
 
+  // Criando uma lista de atividades
+  public lista = [
+    {id: 1, nome: "Dormir"},
+    {id: 2, nome: "Tomar Remédio"}
+  ];
+
   cancelar(): void {
     this.nome = '';
   }

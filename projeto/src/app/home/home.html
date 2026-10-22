@@ -25,24 +25,18 @@
                 </tr>
             </thead>
 
+            <!-- Vamos Começar a fazer a varredura do vetor lista-->
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Tomar Remédio</td>
-                    <td>"Editar" | "Excluir"</td>
-                </tr>
+                @for (atividade of lista; track atividade.id){
+                    <tr>
+                <!-- Vínculo simples entre o html e TS  -> Somente leitura de valores -->
+                        <td>{{atividade.id}}</td>
+                        <td>{{atividade.nome}}</td>
+                        <td>"Editar" | "Excluir"</td>
+                    </tr>
+                }
 
-                <tr>
-                    <td>2</td>
-                    <td>Comer</td>
-                    <td>"Editar" | "Excluir"</td>
-                </tr>
-
-                <tr>
-                    <td>3</td>
-                    <td>Dormir</td>
-                    <td>"Editar" | "Excluir"</td>
-                </tr>
+                
             </tbody>
 
         </table>
