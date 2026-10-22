@@ -24,6 +24,8 @@ export class Home {
     {id: 2, nome: "Tomar Remédio"}
   ];
 
+  public editando: number | number ;
+
   cancelar(): void {
     this.nome = '';
   }
