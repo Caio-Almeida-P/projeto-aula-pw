@@ -5,12 +5,12 @@
 <main>
     <section class="formulario">
         <!-- Por conta do FormsModule o Angular irá gerenciar o Submit do formulário -->
-        <form (ngSubmit)="editando === null ? null ? adicionar() : salvar()">
+         <form (ngSubmit)=" editando === null ? adicionar() : salvar()">
             <label for="nome">Atividade: </label>
             <!--[(ngModel)] = "nome" cria um vínculo de duas mãos com o TS-->
             <input type="text" id="nome" name="nome" [(ngModel)]="nome" placeholder="Nova Atividade" required>
 
-            <button type="submit" >{{editando == null ? "Adicionar" : "Salvar"}} >Salvar</button>
+            <button type="submit" >{{editando == null ? "Adicionar" : "Salvar"}}</button>
             <button (click)="cancelar()">Limpar</button>
         </form>
     </section>
