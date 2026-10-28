@@ -5,6 +5,7 @@ import {CommonModule} from '@angular/common';
 
 // Permite que o Angular gerencie o formulário | Vínculo de botão com métodos
 import {FormsModule} from '@angular/forms';
+import { Atividade } from './atividade';
 
 
 @Component({
@@ -19,15 +20,22 @@ export class Home {
   public nome = '';
 
   // Criando uma lista de atividades
-  public lista = [
-    {id: 1, nome: "Dormir"},
-    {id: 2, nome: "Tomar Remédio"}
-  ];
+  public lista: Atividade[]= [];
 
   public editando: number | null = null ;
+
+  adicionar(): void {
+    const atividade: Atividade = {
+      id: this.lista.length,
+      nome: this.nome
+    }
+  }
+
+  salvar(): void {
+
+  }
 
   cancelar(): void {
     this.nome = '';
   }
-
 }
