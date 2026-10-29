@@ -29,13 +29,21 @@ export class Home {
       id: this.lista.length,
       nome: this.nome
     }
+    // Eu adiciono à minha lista tudo o que estiver na lista + atividade nova
+    this.lista = [...this.lista, atividade];
+    this.nome = '';
   }
 
-  salvar(): void {
 
+
+  salvar(): void {
+    this.lista = this.lista.map(item => item.id === this.editando ? {...item, nome: this.nome}: item)
+    this.editando = null;
+    this.nome = '';
   }
 
   cancelar(): void {
     this.nome = '';
   }
+  
 }
